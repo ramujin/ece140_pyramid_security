@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Page Info -->
+    <title>Pyramid Security</title>
+    <meta name="author" content="Ramsin Khoshabeh">
+    <meta name="description" content="Safety is State of Mind">
+
+    <link rel="stylesheet" type="text/css" href="css/agile.css">
+  </head>
+
+  <body>
+
+    <div class='hero'>
+      <h1> Secured Login Form </h1>
+    </div>
+
+    <section class='padding-responsive'>
+
+      <div class='separator'>Login Below</div>
+
+      {% if error %}
+      <p> {{ error }} </p>
+      {% endif %}
+
+      <form method="POST" action="/post_login">
+        <section class='responsive_grid'>
+
+          <div class='field'>
+            <label> Email Address: &nbsp;</label>
+            <input type='email' name='email' value='' class='margin-top-lg'>
+          </div>
+
+          <div class='field'>
+            <label> Password: &nbsp;</label>
+            <input type='password' name='password' value='' class='margin-top-lg'>
+          </div>
+        </section>
+
+        <button class='btn medium pill'> Login </button>
+      </form>
+
+    </section>
+
+  </body>
+</html>
